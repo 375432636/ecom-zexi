@@ -1,1 +1,78 @@
-/* Design tokens will be defined in a later task */
+:root {
+  /* Colors */
+  --color-primary: #2c2c2c;
+  --color-on-primary: #ffffff;
+  --color-canvas: #fafaf8;
+  --color-soft-cloud: #f0efe9;
+  --color-ink: #2c2c2c;
+  --color-charcoal: #4a4a4a;
+  --color-mute: #8a8a8a;
+  --color-stone: #b8b8b8;
+  --color-wood: #d4a574;
+  --color-wood-light: #ebe4d9;
+  --color-sale: #c44536;
+  --color-success: #4a7c59;
+
+  /* Typography */
+  --font-display: 'Playfair Display', serif;
+  --font-body-zh: 'Noto Sans SC', sans-serif;
+  --font-body-ja: 'Noto Sans JP', sans-serif;
+  --font-body-ko: 'Noto Sans KR', sans-serif;
+  --font-body-en: 'Noto Sans SC', sans-serif;
+
+  --font-size-hero: 64px;
+  --font-size-heading-xl: 32px;
+  --font-size-heading-lg: 24px;
+  --font-size-heading-md: 18px;
+  --font-size-body: 16px;
+  --font-size-caption: 14px;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-section: 64px;
+
+  /* Rounded */
+  --rounded-none: 0px;
+  --rounded-sm: 8px;
+  --rounded-md: 16px;
+  --rounded-lg: 24px;
+  --rounded-full: 9999px;
+
+  /* Z-index */
+  --z-nav: 100;
+  --z-dropdown: 200;
+}
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body-zh);
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  line-height: 1.6;
+}
+
+body[lang="en"] { font-family: var(--font-body-en); }
+body[lang="ja"] { font-family: var(--font-body-ja); }
+body[lang="ko"] { font-family: var(--font-body-ko); }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: inherit;
+}
