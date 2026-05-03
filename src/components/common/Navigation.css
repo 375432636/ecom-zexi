@@ -68,3 +68,32 @@
 .nav-icon:hover {
   background: var(--color-wood-light);
 }
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 0 var(--spacing-md);
+    height: 56px;
+  }
+
+  .nav-logo {
+    font-size: 18px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-actions {
+    gap: var(--spacing-sm);
+  }
+
+  .nav-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .nav-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+}

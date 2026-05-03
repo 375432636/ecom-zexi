@@ -1,0 +1,119 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - link "栖居 QIJU" [ref=e6] [cursor=pointer]:
+      - /url: /
+    - generic [ref=e7]:
+      - link "储物" [ref=e8] [cursor=pointer]:
+        - /url: /products/storage
+      - link "睡眠" [ref=e9] [cursor=pointer]:
+        - /url: /products/sleep
+      - link "用餐" [ref=e10] [cursor=pointer]:
+        - /url: /products/dining
+      - link "工作" [ref=e11] [cursor=pointer]:
+        - /url: /products/work
+      - link "客厅" [ref=e12] [cursor=pointer]:
+        - /url: /products/living
+    - generic [ref=e13]:
+      - button "🇨🇳 中文" [ref=e15] [cursor=pointer]:
+        - generic [ref=e16]: 🇨🇳
+        - generic [ref=e17]: 中文
+        - img [ref=e18]
+      - button "Search" [ref=e20] [cursor=pointer]:
+        - img [ref=e21]
+      - button "Favorites" [ref=e24] [cursor=pointer]:
+        - img [ref=e25]
+      - button "Cart" [ref=e27] [cursor=pointer]:
+        - img [ref=e28]
+  - main [ref=e31]:
+    - generic [ref=e222]:
+      - generic [ref=e223]:
+        - button [ref=e224] [cursor=pointer]:
+          - img [ref=e225]
+        - link "返回商品列表" [ref=e227] [cursor=pointer]:
+          - /url: /products
+      - generic [ref=e228]:
+        - img [ref=e232]
+        - generic [ref=e238]:
+          - generic [ref=e239]: 新品
+          - heading "榆木五斗柜" [level=1] [ref=e240]
+          - paragraph [ref=e241]: 储物 / 衣柜
+          - generic [ref=e243]: ¥2,899
+          - generic [ref=e244]:
+            - heading "选择颜色" [level=3] [ref=e245]
+            - generic [ref=e246]:
+              - button "Color 1" [ref=e247] [cursor=pointer]
+              - button "Color 2" [ref=e248] [cursor=pointer]
+              - button "Color 3" [ref=e249] [cursor=pointer]
+          - generic [ref=e250]:
+            - heading "数量" [level=3] [ref=e251]
+            - generic [ref=e252]:
+              - button "−" [disabled] [ref=e253]
+              - generic [ref=e254]: "1"
+              - button "+" [ref=e255] [cursor=pointer]
+          - generic [ref=e256]:
+            - button "立即购买" [ref=e257] [cursor=pointer]
+            - button "加入购物车" [ref=e258] [cursor=pointer]
+          - generic [ref=e259]:
+            - heading "商品描述" [level=3] [ref=e260]
+            - paragraph [ref=e261]: 精选实木材质，北欧简约设计，为您的家居空间增添自然温馨的氛围。
+          - generic [ref=e262]:
+            - heading "规格参数" [level=3] [ref=e263]
+            - generic [ref=e264]:
+              - generic [ref=e265]: "材质:"
+              - generic [ref=e266]: 实木 / 金属配件
+            - generic [ref=e267]:
+              - generic [ref=e268]: "尺寸:"
+              - generic [ref=e269]: 根据产品型号
+            - generic [ref=e270]:
+              - generic [ref=e271]: "质保信息:"
+              - generic [ref=e272]: 2年质保
+  - contentinfo [ref=e190]:
+    - generic [ref=e191]:
+      - generic [ref=e192]:
+        - generic [ref=e193]: 栖居 QIJU
+        - paragraph [ref=e194]:
+          - text: 为现代都市生活打造的简约家具系列。
+          - text: 北欧设计 · 实木工艺 · 适度生活
+      - generic [ref=e195]:
+        - heading "产品" [level=4] [ref=e196]
+        - link "新品上架" [ref=e197] [cursor=pointer]:
+          - /url: "#"
+        - link "热销系列" [ref=e198] [cursor=pointer]:
+          - /url: "#"
+        - link "限时优惠" [ref=e199] [cursor=pointer]:
+          - /url: "#"
+        - link "礼品卡" [ref=e200] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=e201]:
+        - heading "帮助" [level=4] [ref=e202]
+        - link "配送信息" [ref=e203] [cursor=pointer]:
+          - /url: "#"
+        - link "退换政策" [ref=e204] [cursor=pointer]:
+          - /url: "#"
+        - link "安装服务" [ref=e205] [cursor=pointer]:
+          - /url: "#"
+        - link "常见问题" [ref=e206] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=e207]:
+        - heading "关于" [level=4] [ref=e208]
+        - link "品牌故事" [ref=e209] [cursor=pointer]:
+          - /url: "#"
+        - link "设计理念" [ref=e210] [cursor=pointer]:
+          - /url: "#"
+        - link "可持续发展" [ref=e211] [cursor=pointer]:
+          - /url: "#"
+        - link "加入我们" [ref=e212] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=e213]:
+        - heading "联系" [level=4] [ref=e214]
+        - link "在线客服" [ref=e215] [cursor=pointer]:
+          - /url: "#"
+        - link "预约展厅" [ref=e216] [cursor=pointer]:
+          - /url: "#"
+        - link "企业采购" [ref=e217] [cursor=pointer]:
+          - /url: "#"
+        - link "合作洽谈" [ref=e218] [cursor=pointer]:
+          - /url: "#"
+    - generic [ref=e219]:
+      - generic [ref=e220]: © 2026 栖居 QIJU. All rights reserved.
+      - generic [ref=e221]: 隐私政策 · 服务条款 · 沪ICP备xxxxxxxx号

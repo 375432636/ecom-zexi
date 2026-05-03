@@ -1,0 +1,238 @@
+[    1708ms] [INFO] %cDownload the React DevTools for a better development experience: https://reactjs.org/link/react-devtools font-weight:bold @ http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:21548
+[    1743ms] TypeError: Cannot destructure property 'basename' of 'React2.useContext(...)' as it is null.
+    at LinkWithRef (http://localhost:5175/node_modules/.vite/deps/react-router-dom.js?v=24c5cd23:5404:5)
+    at renderWithHooks (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:11546:26)
+    at updateForwardRef (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:14323:28)
+    at beginWork (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:15944:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3672:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3697:24)
+    at invokeGuardedCallback (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3731:39)
+    at beginWork$1 (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19763:15)
+    at performUnitOfWork (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19196:20)
+    at workLoopSync (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19135:13)
+[    1743ms] TypeError: Cannot destructure property 'basename' of 'React2.useContext(...)' as it is null.
+    at LinkWithRef (http://localhost:5175/node_modules/.vite/deps/react-router-dom.js?v=24c5cd23:5404:5)
+    at renderWithHooks (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:11546:26)
+    at updateForwardRef (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:14323:28)
+    at beginWork (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:15944:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3672:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3697:24)
+    at invokeGuardedCallback (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3731:39)
+    at beginWork$1 (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19763:15)
+    at performUnitOfWork (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19196:20)
+    at workLoopSync (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19135:13)
+[    1743ms] TypeError: Cannot destructure property 'basename' of 'React2.useContext(...)' as it is null.
+    at LinkWithRef (http://localhost:5175/node_modules/.vite/deps/react-router-dom.js?v=24c5cd23:5404:5)
+    at renderWithHooks (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:11546:26)
+    at updateForwardRef (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:14323:28)
+    at beginWork (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:15944:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3672:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3697:24)
+    at invokeGuardedCallback (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3731:39)
+    at beginWork$1 (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19763:15)
+    at performUnitOfWork (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19196:20)
+    at workLoopSync (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19135:13)
+[    1743ms] TypeError: Cannot destructure property 'basename' of 'React2.useContext(...)' as it is null.
+    at LinkWithRef (http://localhost:5175/node_modules/.vite/deps/react-router-dom.js?v=24c5cd23:5404:5)
+    at renderWithHooks (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:11546:26)
+    at updateForwardRef (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:14323:28)
+    at beginWork (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:15944:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3672:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3697:24)
+    at invokeGuardedCallback (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3731:39)
+    at beginWork$1 (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19763:15)
+    at performUnitOfWork (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19196:20)
+    at workLoopSync (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19135:13)
+[    1743ms] TypeError: Cannot destructure property 'basename' of 'React2.useContext(...)' as it is null.
+    at LinkWithRef (http://localhost:5175/node_modules/.vite/deps/react-router-dom.js?v=24c5cd23:5404:5)
+    at renderWithHooks (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:11546:26)
+    at updateForwardRef (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:14323:28)
+    at beginWork (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:15944:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3672:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3697:24)
+    at invokeGuardedCallback (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3731:39)
+    at beginWork$1 (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19763:15)
+    at performUnitOfWork (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19196:20)
+    at workLoopSync (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19135:13)
+[    1765ms] TypeError: Cannot destructure property 'basename' of 'React2.useContext(...)' as it is null.
+    at LinkWithRef (http://localhost:5175/node_modules/.vite/deps/react-router-dom.js?v=24c5cd23:5404:5)
+    at renderWithHooks (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:11546:26)
+    at updateForwardRef (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:14323:28)
+    at beginWork (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:15944:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3672:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3697:24)
+    at invokeGuardedCallback (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3731:39)
+    at beginWork$1 (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19763:15)
+    at performUnitOfWork (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19196:20)
+    at workLoopSync (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19135:13)
+[    1765ms] TypeError: Cannot destructure property 'basename' of 'React2.useContext(...)' as it is null.
+    at LinkWithRef (http://localhost:5175/node_modules/.vite/deps/react-router-dom.js?v=24c5cd23:5404:5)
+    at renderWithHooks (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:11546:26)
+    at updateForwardRef (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:14323:28)
+    at beginWork (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:15944:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3672:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3697:24)
+    at invokeGuardedCallback (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3731:39)
+    at beginWork$1 (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19763:15)
+    at performUnitOfWork (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19196:20)
+    at workLoopSync (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19135:13)
+[    1765ms] TypeError: Cannot destructure property 'basename' of 'React2.useContext(...)' as it is null.
+    at LinkWithRef (http://localhost:5175/node_modules/.vite/deps/react-router-dom.js?v=24c5cd23:5404:5)
+    at renderWithHooks (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:11546:26)
+    at updateForwardRef (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:14323:28)
+    at beginWork (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:15944:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3672:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3697:24)
+    at invokeGuardedCallback (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3731:39)
+    at beginWork$1 (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19763:15)
+    at performUnitOfWork (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19196:20)
+    at workLoopSync (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19135:13)
+[    1765ms] TypeError: Cannot destructure property 'basename' of 'React2.useContext(...)' as it is null.
+    at LinkWithRef (http://localhost:5175/node_modules/.vite/deps/react-router-dom.js?v=24c5cd23:5404:5)
+    at renderWithHooks (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:11546:26)
+    at updateForwardRef (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:14323:28)
+    at beginWork (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:15944:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3672:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3697:24)
+    at invokeGuardedCallback (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3731:39)
+    at beginWork$1 (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19763:15)
+    at performUnitOfWork (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19196:20)
+    at workLoopSync (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19135:13)
+[    1765ms] TypeError: Cannot destructure property 'basename' of 'React2.useContext(...)' as it is null.
+    at LinkWithRef (http://localhost:5175/node_modules/.vite/deps/react-router-dom.js?v=24c5cd23:5404:5)
+    at renderWithHooks (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:11546:26)
+    at updateForwardRef (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:14323:28)
+    at beginWork (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:15944:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3672:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3697:24)
+    at invokeGuardedCallback (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3731:39)
+    at beginWork$1 (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19763:15)
+    at performUnitOfWork (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19196:20)
+    at workLoopSync (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19135:13)
+[    1740ms] [ERROR] The above error occurred in the <Link> component:
+
+    at LinkWithRef (http://localhost:5175/node_modules/.vite/deps/react-router-dom.js?v=24c5cd23:5393:5)
+    at div
+    at nav
+    at Navigation (http://localhost:5175/src/components/common/Navigation.jsx:24:17)
+    at div
+    at PageLayout (http://localhost:5175/src/components/layout/PageLayout.jsx:21:30)
+    at I18nProvider (http://localhost:5175/src/contexts/I18nContext.jsx:21:32)
+    at App
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. @ http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:14029
+[    1740ms] [ERROR] The above error occurred in the <Link> component:
+
+    at LinkWithRef (http://localhost:5175/node_modules/.vite/deps/react-router-dom.js?v=24c5cd23:5393:5)
+    at div
+    at nav
+    at Navigation (http://localhost:5175/src/components/common/Navigation.jsx:24:17)
+    at div
+    at PageLayout (http://localhost:5175/src/components/layout/PageLayout.jsx:21:30)
+    at I18nProvider (http://localhost:5175/src/contexts/I18nContext.jsx:21:32)
+    at App
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. @ http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:14029
+[    1740ms] [ERROR] The above error occurred in the <Link> component:
+
+    at LinkWithRef (http://localhost:5175/node_modules/.vite/deps/react-router-dom.js?v=24c5cd23:5393:5)
+    at div
+    at nav
+    at Navigation (http://localhost:5175/src/components/common/Navigation.jsx:24:17)
+    at div
+    at PageLayout (http://localhost:5175/src/components/layout/PageLayout.jsx:21:30)
+    at I18nProvider (http://localhost:5175/src/contexts/I18nContext.jsx:21:32)
+    at App
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. @ http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:14029
+[    1740ms] [ERROR] The above error occurred in the <Link> component:
+
+    at LinkWithRef (http://localhost:5175/node_modules/.vite/deps/react-router-dom.js?v=24c5cd23:5393:5)
+    at div
+    at nav
+    at Navigation (http://localhost:5175/src/components/common/Navigation.jsx:24:17)
+    at div
+    at PageLayout (http://localhost:5175/src/components/layout/PageLayout.jsx:21:30)
+    at I18nProvider (http://localhost:5175/src/contexts/I18nContext.jsx:21:32)
+    at App
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. @ http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:14029
+[    1740ms] [ERROR] The above error occurred in the <Link> component:
+
+    at LinkWithRef (http://localhost:5175/node_modules/.vite/deps/react-router-dom.js?v=24c5cd23:5393:5)
+    at div
+    at nav
+    at Navigation (http://localhost:5175/src/components/common/Navigation.jsx:24:17)
+    at div
+    at PageLayout (http://localhost:5175/src/components/layout/PageLayout.jsx:21:30)
+    at I18nProvider (http://localhost:5175/src/contexts/I18nContext.jsx:21:32)
+    at App
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. @ http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:14029
+[    1765ms] TypeError: Cannot destructure property 'basename' of 'React2.useContext(...)' as it is null.
+    at LinkWithRef (http://localhost:5175/node_modules/.vite/deps/react-router-dom.js?v=24c5cd23:5404:5)
+    at renderWithHooks (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:11546:26)
+    at updateForwardRef (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:14323:28)
+    at beginWork (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:15944:22)
+    at beginWork$1 (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19751:22)
+    at performUnitOfWork (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19196:20)
+    at workLoopSync (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19135:13)
+    at renderRootSync (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19114:15)
+    at recoverFromConcurrentError (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:18734:28)
+    at performConcurrentWorkOnRoot (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:18682:30)
+[    1770ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:5175/favicon.ico:0
+[   18703ms] Error: You cannot render a <Router> inside another <Router>. You should never have more than one in your app.
+    at invariant (http://localhost:5175/node_modules/.vite/deps/react-router-dom.js?v=24c5cd23:207:11)
+    at Router (http://localhost:5175/node_modules/.vite/deps/react-router-dom.js?v=24c5cd23:4550:35)
+    at renderWithHooks (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:11546:26)
+    at mountIndeterminateComponent (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:14924:21)
+    at beginWork (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:15912:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3672:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3697:24)
+    at invokeGuardedCallback (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3731:39)
+    at beginWork$1 (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19763:15)
+    at performUnitOfWork (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19196:20)
+[   18705ms] Error: You cannot render a <Router> inside another <Router>. You should never have more than one in your app.
+    at invariant (http://localhost:5175/node_modules/.vite/deps/react-router-dom.js?v=24c5cd23:207:11)
+    at Router (http://localhost:5175/node_modules/.vite/deps/react-router-dom.js?v=24c5cd23:4550:35)
+    at renderWithHooks (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:11546:26)
+    at mountIndeterminateComponent (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:14924:21)
+    at beginWork (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:15912:22)
+    at HTMLUnknownElement.callCallback2 (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3672:22)
+    at Object.invokeGuardedCallbackDev (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3697:24)
+    at invokeGuardedCallback (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:3731:39)
+    at beginWork$1 (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19763:15)
+    at performUnitOfWork (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19196:20)
+[   18705ms] [ERROR] The above error occurred in the <Router> component:
+
+    at Router (http://localhost:5175/node_modules/.vite/deps/react-router-dom.js?v=24c5cd23:4542:15)
+    at BrowserRouter (http://localhost:5175/node_modules/.vite/deps/react-router-dom.js?v=24c5cd23:5288:5)
+    at AppRouter
+    at main
+    at div
+    at PageLayout (http://localhost:5175/src/components/layout/PageLayout.jsx:21:30)
+    at Router (http://localhost:5175/node_modules/.vite/deps/react-router-dom.js?v=24c5cd23:4542:15)
+    at BrowserRouter (http://localhost:5175/node_modules/.vite/deps/react-router-dom.js?v=24c5cd23:5288:5)
+    at I18nProvider (http://localhost:5175/src/contexts/I18nContext.jsx:21:32)
+    at App
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. @ http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:14029
+[   18706ms] Error: You cannot render a <Router> inside another <Router>. You should never have more than one in your app.
+    at invariant (http://localhost:5175/node_modules/.vite/deps/react-router-dom.js?v=24c5cd23:207:11)
+    at Router (http://localhost:5175/node_modules/.vite/deps/react-router-dom.js?v=24c5cd23:4550:35)
+    at renderWithHooks (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:11546:26)
+    at mountIndeterminateComponent (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:14924:21)
+    at beginWork (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:15912:22)
+    at beginWork$1 (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19751:22)
+    at performUnitOfWork (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19196:20)
+    at workLoopSync (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19135:13)
+    at renderRootSync (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:19114:15)
+    at recoverFromConcurrentError (http://localhost:5175/node_modules/.vite/deps/chunk-XPR23Y44.js?v=3d05d607:18734:28)
+[   20605ms] [WARNING] ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition. @ http://localhost:5175/node_modules/.vite/deps/react-router-dom.js?v=24c5cd23:4433
+[   20605ms] [WARNING] ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath. @ http://localhost:5175/node_modules/.vite/deps/react-router-dom.js?v=24c5cd23:4433

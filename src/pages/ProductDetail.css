@@ -275,8 +275,17 @@
 }
 
 @media (max-width: 768px) {
+  .product-detail-page {
+    padding-top: 70px;
+  }
+
+  .detail-header {
+    padding: var(--spacing-md);
+  }
+
   .product-showcase {
     grid-template-columns: 1fr;
+    padding: 0 var(--spacing-md);
   }
 
   .product-images {
@@ -293,5 +302,24 @@
 
   .detail-actions {
     flex-direction: column;
+  }
+
+  .color-option {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-detail-page {
+    padding-top: 65px;
+  }
+
+  .detail-name {
+    font-size: 22px;
+  }
+
+  .price-current {
+    font-size: 22px;
   }
 }

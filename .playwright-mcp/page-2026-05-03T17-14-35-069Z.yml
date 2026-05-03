@@ -1,0 +1,170 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e5]: 栖居 QIJU
+    - generic [ref=e6]:
+      - link "수납" [ref=e7] [cursor=pointer]:
+        - /url: /#storage
+      - link "수면" [ref=e8] [cursor=pointer]:
+        - /url: /#sleep
+      - link "다이닝" [ref=e9] [cursor=pointer]:
+        - /url: /#dining
+      - link "워크" [ref=e10] [cursor=pointer]:
+        - /url: /#work
+      - link "리빙" [ref=e11] [cursor=pointer]:
+        - /url: /#living
+    - generic [ref=e12]:
+      - button "🇰🇷 한국어" [ref=e14] [cursor=pointer]:
+        - generic [ref=e15]: 🇰🇷
+        - generic [ref=e16]: 한국어
+        - img [ref=e17]
+      - button "Search" [ref=e19] [cursor=pointer]:
+        - img [ref=e20]
+      - button "Favorites" [ref=e23] [cursor=pointer]:
+        - img [ref=e24]
+      - button "Cart" [ref=e26] [cursor=pointer]:
+        - img [ref=e27]
+  - main [ref=e30]:
+    - generic [ref=e31]:
+      - generic [ref=e35]:
+        - generic [ref=e36]: 봄 신상품
+        - heading "집에 온기를 더하다" [level=1] [ref=e37]
+        - paragraph [ref=e38]: 북유럽 미니멀 디자인, 목공 장인 정신, 현대 도시 생활을 위해 만들어진 미니멀리스트 가구 시리즈
+        - generic [ref=e39]:
+          - button "컬렉션 보기" [ref=e40] [cursor=pointer]
+          - button "더 알아보기" [ref=e41] [cursor=pointer]
+      - generic [ref=e42]:
+        - heading "용도별 보기" [level=2] [ref=e44]
+        - generic [ref=e45]:
+          - generic [ref=e46] [cursor=pointer]:
+            - generic [ref=e47]: 🗄️
+            - generic [ref=e48]: 수납
+          - generic [ref=e49] [cursor=pointer]:
+            - generic [ref=e50]: 🛏️
+            - generic [ref=e51]: 수면
+          - generic [ref=e52] [cursor=pointer]:
+            - generic [ref=e53]: 🍽️
+            - generic [ref=e54]: 다이닝
+          - generic [ref=e55] [cursor=pointer]:
+            - generic [ref=e56]: 💼
+            - generic [ref=e57]: 워크
+          - generic [ref=e58] [cursor=pointer]:
+            - generic [ref=e59]: 🛋️
+            - generic [ref=e60]: 리빙
+      - generic [ref=e61]:
+        - generic [ref=e62]:
+          - heading "이번 주 추천" [level=2] [ref=e63]
+          - button "전체보기 →" [ref=e64] [cursor=pointer]
+        - generic [ref=e65]:
+          - generic [ref=e66] [cursor=pointer]:
+            - generic [ref=e67]:
+              - img [ref=e69]
+              - generic [ref=e71]: 新品
+            - generic [ref=e72]:
+              - generic [ref=e73]: 榆木五斗柜
+              - generic [ref=e74]: 储物 / 衣柜
+              - generic [ref=e76]: ¥2,899
+          - generic [ref=e81] [cursor=pointer]:
+            - img [ref=e84]
+            - generic [ref=e86]:
+              - generic [ref=e87]: 北欧实木双人床
+              - generic [ref=e88]: 睡眠 / 床
+              - generic [ref=e89]:
+                - generic [ref=e90]: ¥4,599
+                - generic [ref=e91]: ¥5,299
+                - generic [ref=e92]: "-13%"
+          - generic [ref=e96] [cursor=pointer]:
+            - img [ref=e99]
+            - generic [ref=e101]:
+              - generic [ref=e102]: 橡木圆餐桌
+              - generic [ref=e103]: 用餐 / 餐桌
+              - generic [ref=e105]: ¥1,899
+          - generic [ref=e109] [cursor=pointer]:
+            - generic [ref=e110]:
+              - img [ref=e112]
+              - generic [ref=e114]: 新品
+            - generic [ref=e115]:
+              - generic [ref=e116]: 升降书桌
+              - generic [ref=e117]: 工作 / 书桌
+              - generic [ref=e119]: ¥2,199
+          - generic [ref=e123] [cursor=pointer]:
+            - img [ref=e126]
+            - generic [ref=e128]:
+              - generic [ref=e129]: 书柜组合
+              - generic [ref=e130]: 储物 / 书柜
+              - generic [ref=e131]:
+                - generic [ref=e132]: ¥3,299
+                - generic [ref=e133]: ¥3,899
+                - generic [ref=e134]: "-15%"
+          - generic [ref=e138] [cursor=pointer]:
+            - img [ref=e141]
+            - generic [ref=e143]:
+              - generic [ref=e144]: 布艺沙发
+              - generic [ref=e145]: 客厅 / 沙发
+              - generic [ref=e147]: ¥5,999
+          - generic [ref=e152] [cursor=pointer]:
+            - generic [ref=e153]:
+              - img [ref=e155]
+              - generic [ref=e157]: 新品
+            - generic [ref=e158]:
+              - generic [ref=e159]: 床头柜
+              - generic [ref=e160]: 睡眠 / 床头柜
+              - generic [ref=e162]: ¥699
+          - generic [ref=e166] [cursor=pointer]:
+            - img [ref=e169]
+            - generic [ref=e171]:
+              - generic [ref=e172]: 电视柜
+              - generic [ref=e173]: 客厅 / 电视柜
+              - generic [ref=e174]:
+                - generic [ref=e175]: ¥1,599
+                - generic [ref=e176]: ¥1,899
+                - generic [ref=e177]: "-16%"
+  - contentinfo [ref=e181]:
+    - generic [ref=e182]:
+      - generic [ref=e183]:
+        - generic [ref=e184]: 栖居 QIJU
+        - paragraph [ref=e185]:
+          - text: 현대 도시 생활을 위한 미니멀리스트 가구.
+          - text: 북유럽 디자인 · 목공 장인 정신 · 절제된 삶
+      - generic [ref=e186]:
+        - heading "제품" [level=4] [ref=e187]
+        - link "신상품" [ref=e188] [cursor=pointer]:
+          - /url: "#"
+        - link "베스트셀러" [ref=e189] [cursor=pointer]:
+          - /url: "#"
+        - link "세일" [ref=e190] [cursor=pointer]:
+          - /url: "#"
+        - link "기프트카드" [ref=e191] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=e192]:
+        - heading "도움말" [level=4] [ref=e193]
+        - link "배송" [ref=e194] [cursor=pointer]:
+          - /url: "#"
+        - link "반품/교환" [ref=e195] [cursor=pointer]:
+          - /url: "#"
+        - link "설치 서비스" [ref=e196] [cursor=pointer]:
+          - /url: "#"
+        - link "자주 묻는 질문" [ref=e197] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=e198]:
+        - heading "소개" [level=4] [ref=e199]
+        - link "브랜드 스토리" [ref=e200] [cursor=pointer]:
+          - /url: "#"
+        - link "철학" [ref=e201] [cursor=pointer]:
+          - /url: "#"
+        - link "지속 가능성" [ref=e202] [cursor=pointer]:
+          - /url: "#"
+        - link "채용" [ref=e203] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=e204]:
+        - heading "연락처" [level=4] [ref=e205]
+        - link "고객 지원" [ref=e206] [cursor=pointer]:
+          - /url: "#"
+        - link "쇼룸" [ref=e207] [cursor=pointer]:
+          - /url: "#"
+        - link "B2B" [ref=e208] [cursor=pointer]:
+          - /url: "#"
+        - link "제휴" [ref=e209] [cursor=pointer]:
+          - /url: "#"
+    - generic [ref=e210]:
+      - generic [ref=e211]: © 2026 栖居 QIJU. All rights reserved.
+      - generic [ref=e212]: 개인정보처리방침 · 서비스약관

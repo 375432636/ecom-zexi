@@ -1,0 +1,170 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e5]: QIJU Home
+    - generic [ref=e6]:
+      - link "Storage" [ref=e226] [cursor=pointer]:
+        - /url: /#storage
+      - link "Sleep" [ref=e227] [cursor=pointer]:
+        - /url: /#sleep
+      - link "Dining" [ref=e228] [cursor=pointer]:
+        - /url: /#dining
+      - link "Work" [ref=e229] [cursor=pointer]:
+        - /url: /#work
+      - link "Living" [ref=e230] [cursor=pointer]:
+        - /url: /#living
+    - generic [ref=e12]:
+      - button "🇺🇸 English" [ref=e231] [cursor=pointer]:
+        - generic [ref=e15]: 🇺🇸
+        - generic [ref=e16]: English
+        - img [ref=e17]
+      - button "Search" [ref=e19] [cursor=pointer]:
+        - img [ref=e20]
+      - button "Favorites" [ref=e23] [cursor=pointer]:
+        - img [ref=e24]
+      - button "Cart" [ref=e26] [cursor=pointer]:
+        - img [ref=e27]
+  - main [ref=e30]:
+    - generic [ref=e31]:
+      - generic [ref=e35]:
+        - generic [ref=e36]: New Collection
+        - heading "Warmth for Your Home" [level=1] [ref=e232]
+        - paragraph [ref=e38]: Nordic minimalist design, solid wood craftsmanship, furniture collection crafted for modern urban life
+        - generic [ref=e39]:
+          - button "Shop Collection" [ref=e233] [cursor=pointer]
+          - button "Learn More" [ref=e234] [cursor=pointer]
+      - generic [ref=e42]:
+        - heading "Browse by Function" [level=2] [ref=e235]
+        - generic [ref=e45]:
+          - generic [ref=e46] [cursor=pointer]:
+            - generic [ref=e47]: 🗄️
+            - generic [ref=e48]: Storage
+          - generic [ref=e49] [cursor=pointer]:
+            - generic [ref=e50]: 🛏️
+            - generic [ref=e51]: Sleep
+          - generic [ref=e52] [cursor=pointer]:
+            - generic [ref=e53]: 🍽️
+            - generic [ref=e54]: Dining
+          - generic [ref=e55] [cursor=pointer]:
+            - generic [ref=e56]: 💼
+            - generic [ref=e57]: Work
+          - generic [ref=e58] [cursor=pointer]:
+            - generic [ref=e59]: 🛋️
+            - generic [ref=e60]: Living
+      - generic [ref=e61]:
+        - generic [ref=e62]:
+          - heading "Featured This Week" [level=2] [ref=e236]
+          - button "View All →" [ref=e237] [cursor=pointer]
+        - generic [ref=e65]:
+          - generic [ref=e66] [cursor=pointer]:
+            - generic [ref=e67]:
+              - img [ref=e69]
+              - generic [ref=e71]: 新品
+            - generic [ref=e72]:
+              - generic [ref=e73]: 榆木五斗柜
+              - generic [ref=e74]: 储物 / 衣柜
+              - generic [ref=e76]: ¥2,899
+          - generic [ref=e81] [cursor=pointer]:
+            - img [ref=e84]
+            - generic [ref=e86]:
+              - generic [ref=e87]: 北欧实木双人床
+              - generic [ref=e88]: 睡眠 / 床
+              - generic [ref=e89]:
+                - generic [ref=e90]: ¥4,599
+                - generic [ref=e91]: ¥5,299
+                - generic [ref=e92]: "-13%"
+          - generic [ref=e96] [cursor=pointer]:
+            - img [ref=e99]
+            - generic [ref=e101]:
+              - generic [ref=e102]: 橡木圆餐桌
+              - generic [ref=e103]: 用餐 / 餐桌
+              - generic [ref=e105]: ¥1,899
+          - generic [ref=e109] [cursor=pointer]:
+            - generic [ref=e110]:
+              - img [ref=e112]
+              - generic [ref=e114]: 新品
+            - generic [ref=e115]:
+              - generic [ref=e116]: 升降书桌
+              - generic [ref=e117]: 工作 / 书桌
+              - generic [ref=e119]: ¥2,199
+          - generic [ref=e123] [cursor=pointer]:
+            - img [ref=e126]
+            - generic [ref=e128]:
+              - generic [ref=e129]: 书柜组合
+              - generic [ref=e130]: 储物 / 书柜
+              - generic [ref=e131]:
+                - generic [ref=e132]: ¥3,299
+                - generic [ref=e133]: ¥3,899
+                - generic [ref=e134]: "-15%"
+          - generic [ref=e138] [cursor=pointer]:
+            - img [ref=e141]
+            - generic [ref=e143]:
+              - generic [ref=e144]: 布艺沙发
+              - generic [ref=e145]: 客厅 / 沙发
+              - generic [ref=e147]: ¥5,999
+          - generic [ref=e152] [cursor=pointer]:
+            - generic [ref=e153]:
+              - img [ref=e155]
+              - generic [ref=e157]: 新品
+            - generic [ref=e158]:
+              - generic [ref=e159]: 床头柜
+              - generic [ref=e160]: 睡眠 / 床头柜
+              - generic [ref=e162]: ¥699
+          - generic [ref=e166] [cursor=pointer]:
+            - img [ref=e169]
+            - generic [ref=e171]:
+              - generic [ref=e172]: 电视柜
+              - generic [ref=e173]: 客厅 / 电视柜
+              - generic [ref=e174]:
+                - generic [ref=e175]: ¥1,599
+                - generic [ref=e176]: ¥1,899
+                - generic [ref=e177]: "-16%"
+  - contentinfo [ref=e181]:
+    - generic [ref=e182]:
+      - generic [ref=e183]:
+        - generic [ref=e184]: QIJU Home
+        - paragraph [ref=e185]:
+          - text: Minimalist furniture for modern urban living.
+          - text: Nordic Design · Solid Wood Craftsmanship · Mindful Living
+      - generic [ref=e186]:
+        - heading "Products" [level=4] [ref=e238]
+        - link "New Arrivals" [ref=e239] [cursor=pointer]:
+          - /url: "#"
+        - link "Bestsellers" [ref=e240] [cursor=pointer]:
+          - /url: "#"
+        - link "Sale" [ref=e241] [cursor=pointer]:
+          - /url: "#"
+        - link "Gift Card" [ref=e242] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=e192]:
+        - heading "Help" [level=4] [ref=e243]
+        - link "Shipping" [ref=e244] [cursor=pointer]:
+          - /url: "#"
+        - link "Returns" [ref=e245] [cursor=pointer]:
+          - /url: "#"
+        - link "Installation" [ref=e246] [cursor=pointer]:
+          - /url: "#"
+        - link "FAQ" [ref=e247] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=e198]:
+        - heading "About" [level=4] [ref=e248]
+        - link "Our Story" [ref=e249] [cursor=pointer]:
+          - /url: "#"
+        - link "Philosophy" [ref=e250] [cursor=pointer]:
+          - /url: "#"
+        - link "Sustainability" [ref=e251] [cursor=pointer]:
+          - /url: "#"
+        - link "Careers" [ref=e252] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=e204]:
+        - heading "Contact" [level=4] [ref=e253]
+        - link "Support" [ref=e254] [cursor=pointer]:
+          - /url: "#"
+        - link "Showroom" [ref=e255] [cursor=pointer]:
+          - /url: "#"
+        - link "B2B" [ref=e256] [cursor=pointer]:
+          - /url: "#"
+        - link "Partnership" [ref=e257] [cursor=pointer]:
+          - /url: "#"
+    - generic [ref=e210]:
+      - generic [ref=e211]: © 2026 QIJU Home. All rights reserved.
+      - generic [ref=e212]: Privacy Policy · Terms of Service

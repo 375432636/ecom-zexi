@@ -1,0 +1,184 @@
+- generic [ref=e3]:
+  - navigation [ref=e4]:
+    - generic [ref=e5]: 栖居 QIJU
+    - generic [ref=e6]:
+      - link "収納" [ref=e271] [cursor=pointer]:
+        - /url: /#storage
+      - link "睡眠" [ref=e272] [cursor=pointer]:
+        - /url: /#sleep
+      - link "ダイニング" [ref=e273] [cursor=pointer]:
+        - /url: /#dining
+      - link "ワーク" [ref=e274] [cursor=pointer]:
+        - /url: /#work
+      - link "リビング" [ref=e275] [cursor=pointer]:
+        - /url: /#living
+    - generic [ref=e12]:
+      - generic [ref=e13]:
+        - button "🇯🇵 日本語" [active] [ref=e276] [cursor=pointer]:
+          - generic [ref=e15]: 🇯🇵
+          - generic [ref=e16]: 日本語
+          - img [ref=e17]
+        - generic [ref=e303]:
+          - generic [ref=e304] [cursor=pointer]:
+            - generic [ref=e305]: 🇨🇳
+            - generic [ref=e306]: 中文
+          - generic [ref=e307] [cursor=pointer]:
+            - generic [ref=e308]: 🇺🇸
+            - generic [ref=e309]: English
+          - generic [ref=e310] [cursor=pointer]:
+            - generic [ref=e311]: 🇯🇵
+            - generic [ref=e312]: 日本語
+          - generic [ref=e313] [cursor=pointer]:
+            - generic [ref=e314]: 🇰🇷
+            - generic [ref=e315]: 한국어
+      - button "Search" [ref=e19] [cursor=pointer]:
+        - img [ref=e20]
+      - button "Favorites" [ref=e23] [cursor=pointer]:
+        - img [ref=e24]
+      - button "Cart" [ref=e26] [cursor=pointer]:
+        - img [ref=e27]
+  - main [ref=e30]:
+    - generic [ref=e31]:
+      - generic [ref=e35]:
+        - generic [ref=e36]: 春の新作
+        - heading "家に温もりを" [level=1] [ref=e277]
+        - paragraph [ref=e38]: 北欧ミニマルデザイン、堅木の職人技、現代都市生活のために作られたミニマリスト家具シリーズ
+        - generic [ref=e39]:
+          - button "コレクションを見る" [ref=e278] [cursor=pointer]
+          - button "詳しく見る" [ref=e279] [cursor=pointer]
+      - generic [ref=e42]:
+        - heading "機能から探す" [level=2] [ref=e280]
+        - generic [ref=e45]:
+          - generic [ref=e46] [cursor=pointer]:
+            - generic [ref=e47]: 🗄️
+            - generic [ref=e48]: 収納
+          - generic [ref=e49] [cursor=pointer]:
+            - generic [ref=e50]: 🛏️
+            - generic [ref=e51]: 睡眠
+          - generic [ref=e52] [cursor=pointer]:
+            - generic [ref=e53]: 🍽️
+            - generic [ref=e54]: ダイニング
+          - generic [ref=e55] [cursor=pointer]:
+            - generic [ref=e56]: 💼
+            - generic [ref=e57]: ワーク
+          - generic [ref=e58] [cursor=pointer]:
+            - generic [ref=e59]: 🛋️
+            - generic [ref=e60]: リビング
+      - generic [ref=e61]:
+        - generic [ref=e62]:
+          - heading "今週のおすすめ" [level=2] [ref=e281]
+          - button "すべて見る →" [ref=e282] [cursor=pointer]
+        - generic [ref=e65]:
+          - generic [ref=e66] [cursor=pointer]:
+            - generic [ref=e67]:
+              - img [ref=e69]
+              - generic [ref=e71]: 新品
+            - generic [ref=e72]:
+              - generic [ref=e73]: 榆木五斗柜
+              - generic [ref=e74]: 储物 / 衣柜
+              - generic [ref=e76]: ¥2,899
+          - generic [ref=e81] [cursor=pointer]:
+            - img [ref=e84]
+            - generic [ref=e86]:
+              - generic [ref=e87]: 北欧实木双人床
+              - generic [ref=e88]: 睡眠 / 床
+              - generic [ref=e89]:
+                - generic [ref=e90]: ¥4,599
+                - generic [ref=e91]: ¥5,299
+                - generic [ref=e92]: "-13%"
+          - generic [ref=e96] [cursor=pointer]:
+            - img [ref=e99]
+            - generic [ref=e101]:
+              - generic [ref=e102]: 橡木圆餐桌
+              - generic [ref=e103]: 用餐 / 餐桌
+              - generic [ref=e105]: ¥1,899
+          - generic [ref=e109] [cursor=pointer]:
+            - generic [ref=e110]:
+              - img [ref=e112]
+              - generic [ref=e114]: 新品
+            - generic [ref=e115]:
+              - generic [ref=e116]: 升降书桌
+              - generic [ref=e117]: 工作 / 书桌
+              - generic [ref=e119]: ¥2,199
+          - generic [ref=e123] [cursor=pointer]:
+            - img [ref=e126]
+            - generic [ref=e128]:
+              - generic [ref=e129]: 书柜组合
+              - generic [ref=e130]: 储物 / 书柜
+              - generic [ref=e131]:
+                - generic [ref=e132]: ¥3,299
+                - generic [ref=e133]: ¥3,899
+                - generic [ref=e134]: "-15%"
+          - generic [ref=e138] [cursor=pointer]:
+            - img [ref=e141]
+            - generic [ref=e143]:
+              - generic [ref=e144]: 布艺沙发
+              - generic [ref=e145]: 客厅 / 沙发
+              - generic [ref=e147]: ¥5,999
+          - generic [ref=e152] [cursor=pointer]:
+            - generic [ref=e153]:
+              - img [ref=e155]
+              - generic [ref=e157]: 新品
+            - generic [ref=e158]:
+              - generic [ref=e159]: 床头柜
+              - generic [ref=e160]: 睡眠 / 床头柜
+              - generic [ref=e162]: ¥699
+          - generic [ref=e166] [cursor=pointer]:
+            - img [ref=e169]
+            - generic [ref=e171]:
+              - generic [ref=e172]: 电视柜
+              - generic [ref=e173]: 客厅 / 电视柜
+              - generic [ref=e174]:
+                - generic [ref=e175]: ¥1,599
+                - generic [ref=e176]: ¥1,899
+                - generic [ref=e177]: "-16%"
+  - contentinfo [ref=e181]:
+    - generic [ref=e182]:
+      - generic [ref=e183]:
+        - generic [ref=e184]: 栖居 QIJU
+        - paragraph [ref=e185]:
+          - text: 現代都市生活のためのミニマリスト家具。
+          - text: 北欧デザイン · 堅木の職人技 · シンプルライフ
+      - generic [ref=e186]:
+        - heading "製品" [level=4] [ref=e283]
+        - link "新着" [ref=e284] [cursor=pointer]:
+          - /url: "#"
+        - link "ベストセラー" [ref=e285] [cursor=pointer]:
+          - /url: "#"
+        - link "セール" [ref=e286] [cursor=pointer]:
+          - /url: "#"
+        - link "ギフトカード" [ref=e287] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=e192]:
+        - heading "ヘルプ" [level=4] [ref=e288]
+        - link "配送" [ref=e289] [cursor=pointer]:
+          - /url: "#"
+        - link "返品・交換" [ref=e290] [cursor=pointer]:
+          - /url: "#"
+        - link "設置サービス" [ref=e291] [cursor=pointer]:
+          - /url: "#"
+        - link "よくある質問" [ref=e292] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=e198]:
+        - heading "私たちについて" [level=4] [ref=e293]
+        - link "ストーリー" [ref=e294] [cursor=pointer]:
+          - /url: "#"
+        - link "哲学" [ref=e295] [cursor=pointer]:
+          - /url: "#"
+        - link "サステナビリティ" [ref=e296] [cursor=pointer]:
+          - /url: "#"
+        - link "採用情報" [ref=e297] [cursor=pointer]:
+          - /url: "#"
+      - generic [ref=e204]:
+        - heading "お問い合わせ" [level=4] [ref=e298]
+        - link "サポート" [ref=e299] [cursor=pointer]:
+          - /url: "#"
+        - link "ショールーム" [ref=e300] [cursor=pointer]:
+          - /url: "#"
+        - link "法人向け" [ref=e301] [cursor=pointer]:
+          - /url: "#"
+        - link "パートナーシップ" [ref=e302] [cursor=pointer]:
+          - /url: "#"
+    - generic [ref=e210]:
+      - generic [ref=e211]: © 2026 栖居 QIJU. All rights reserved.
+      - generic [ref=e212]: プライバシーポリシー · 利用規約
