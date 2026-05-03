@@ -1,0 +1,44 @@
+.category-card {
+  aspect-ratio: 1;
+  background: var(--color-soft-cloud);
+  border-radius: var(--rounded-none);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.category-card:hover {
+  background: var(--color-wood-light);
+}
+
+.category-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.03) 100%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.category-card:hover::before {
+  opacity: 1;
+}
+
+.category-icon {
+  font-size: 48px;
+  margin-bottom: var(--spacing-md);
+}
+
+.category-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-ink);
+}
