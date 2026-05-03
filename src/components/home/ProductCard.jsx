@@ -9,7 +9,7 @@ export const ProductCard = ({ product }) => {
       <div className="product-card">
       <div className="product-image">
         <img
-          src={image}
+          src={import.meta.env.BASE_URL + image}
           alt={name}
           className="product-image-img"
           loading="lazy"

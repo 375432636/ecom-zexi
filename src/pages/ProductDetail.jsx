@@ -60,7 +60,7 @@ export const ProductDetail = () => {
         <div className="product-images">
           <div className="product-main-image">
             <img
-              src={image}
+              src={import.meta.env.BASE_URL + image}
               alt={name}
               className="detail-main-img"
             />
