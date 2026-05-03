@@ -21,7 +21,7 @@ export const Home = () => {
     <div className="home-page">
       <Hero />
 
-      <section className="section">
+      <section id="categories" className="section">
         <div className="section-header">
           <h2 className="section-title">{t('category.title')}</h2>
         </div>
@@ -29,6 +29,7 @@ export const Home = () => {
           {categories.map(cat => (
             <CategoryCard
               key={cat.key}
+              id={cat.key}
               icon={cat.icon}
               name={t(`category.${cat.key}`)}
             />

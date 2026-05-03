@@ -20,6 +20,11 @@
   letter-spacing: 0.05em;
 }
 
+.nav-logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .nav-links {
   display: flex;
   gap: var(--spacing-xl);

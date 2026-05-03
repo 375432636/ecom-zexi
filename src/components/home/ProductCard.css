@@ -1,3 +1,9 @@
+.product-card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
 .product-card {
   background: var(--color-canvas);
   cursor: pointer;

@@ -7,20 +7,22 @@ export const Navigation = () => {
   const { t } = useI18n();
 
   const navLinks = [
-    { key: 'storage', href: '#storage' },
-    { key: 'sleep', href: '#sleep' },
-    { key: 'dining', href: '#dining' },
-    { key: 'work', href: '#work' },
-    { key: 'living', href: '#living' },
+    { key: 'storage', path: '/products/storage' },
+    { key: 'sleep', path: '/products/sleep' },
+    { key: 'dining', path: '/products/dining' },
+    { key: 'work', path: '/products/work' },
+    { key: 'living', path: '/products/living' },
   ];
 
   return (
     <nav className="nav">
-      <div className="nav-logo">{t('brand.logo')}</div>
+      <div className="nav-logo">
+        <Link to="/">{t('brand.logo')}</Link>
+      </div>
 
       <div className="nav-links">
         {navLinks.map(link => (
-          <Link key={link.key} className="nav-link" to={link.href}>
+          <Link key={link.key} className="nav-link" to={link.path}>
             {t(`nav.${link.key}`)}
           </Link>
         ))}
