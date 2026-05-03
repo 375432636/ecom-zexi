@@ -6,7 +6,7 @@ export const products = [
     price: '¥2,899',
     badge: '新品',
     colors: ['#d4a574', '#f5f5f5', '#4a4a4a'],
-    image: '/images/products/product-1.webp',
+    image: 'images/products/product-1.webp',
   },
   {
     id: 2,
@@ -16,7 +16,7 @@ export const products = [
     originalPrice: '¥5,299',
     discount: '-13%',
     colors: ['#d4a574', '#f5f5f5'],
-    image: '/images/products/product-2.webp',
+    image: 'images/products/product-2.webp',
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ export const products = [
     category: '用餐 / 餐桌',
     price: '¥1,899',
     colors: ['#d4a574', '#4a4a4a'],
-    image: '/images/products/product-3.webp',
+    image: 'images/products/product-3.webp',
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ export const products = [
     price: '¥2,199',
     badge: '新品',
     colors: ['#f5f5f5', '#4a4a4a'],
-    image: '/images/products/product-4.webp',
+    image: 'images/products/product-4.webp',
   },
   {
     id: 5,
@@ -43,7 +43,7 @@ export const products = [
     originalPrice: '¥3,899',
     discount: '-15%',
     colors: ['#f5f5f5', '#4a4a4a'],
-    image: '/images/products/product-5.webp',
+    image: 'images/products/product-5.webp',
   },
   {
     id: 6,
@@ -51,7 +51,7 @@ export const products = [
     category: '客厅 / 沙发',
     price: '¥5,999',
     colors: ['#e8ddd4', '#4a4a4a', '#8b7355'],
-    image: '/images/products/product-6.webp',
+    image: 'images/products/product-6.webp',
   },
   {
     id: 7,
@@ -60,7 +60,7 @@ export const products = [
     price: '¥699',
     badge: '新品',
     colors: ['#d4a574', '#f5f5f5'],
-    image: '/images/products/product-7.webp',
+    image: 'images/products/product-7.webp',
   },
   {
     id: 8,
@@ -70,6 +70,6 @@ export const products = [
     originalPrice: '¥1,899',
     discount: '-16%',
     colors: ['#d4a574', '#f5f5f5'],
-    image: '/images/products/product-8.webp',
+    image: 'images/products/product-8.webp',
   },
 ];
