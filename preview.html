@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>栖居 - 现代简约家具</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600&family=Noto+Sans+JP:wght@300;400;500;600&family=Noto+Sans+KR:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2c2c2c;
+            --on-primary: #ffffff;
+            --canvas: #fafaf8;
+            --soft-cloud: #f0efe9;
+            --ink: #2c2c2c;
+            --charcoal: #4a4a4a;
+            --mute: #8a8a8a;
+            --stone: #b8b8b8;
+            --wood: #d4a574;
+            --wood-light: #ebe4d9;
+            --sale: #c44536;
+            --success: #4a7c59;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: var(--canvas);
+            color: var(--ink);
+            line-height: 1.6;
+        }
+
+        body[lang="en"] { font-family: 'Noto Sans SC', sans-serif; }
+        body[lang="ja"] { font-family: 'Noto Sans JP', sans-serif; }
+        body[lang="ko"] { font-family: 'Noto Sans KR', sans-serif; }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 64px;
+            background: var(--canvas);
+            border-bottom: 1px solid var(--soft-cloud);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 48px;
+            z-index: 100;
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+        }
+
+        .nav-link {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--ink);
+            text-decoration: none;
+            position: relative;
+        }
+
+        .nav-link:hover::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--wood);
+        }
+
+        .nav-actions {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .nav-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 999px;
+            background: var(--soft-cloud);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .nav-icon:hover {
+            background: var(--wood-light);
+        }
+
+        .cart-badge {
+            position: relative;
+        }
+
+        .cart-badge::after {
+            content: '2';
+            position: absolute;
+            top: -4px;
+            right: -4px;
+            width: 18px;
+            height: 18px;
+            background: var(--wood);
+            color: white;
+            font-size: 11px;
+            font-weight: 600;
+            border-radius: 999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Language Selector */
+        .lang-selector {
+            position: relative;
+        }
+
+        .lang-button {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: var(--soft-cloud);
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--ink);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .lang-button:hover {
+            background: var(--wood-light);
+        }
+
+        .lang-button svg {
+            width: 14px;
+            height: 14px;
+            transition: transform 0.2s;
+        }
+
+        .lang-button.active svg {
+            transform: rotate(180deg);
+        }
+
+        .lang-dropdown {
+            position: absolute;
+            top: calc(100% + 8px);
+            right: 0;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            min-width: 140px;
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-8px);
+            transition: all 0.2s;
+        }
+
+        .lang-dropdown.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .lang-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 16px;
+            font-size: 14px;
+            color: var(--ink);
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+
+        .lang-option:hover {
+            background: var(--soft-cloud);
+        }
+
+        .lang-option.selected {
+            background: var(--wood-light);
+            font-weight: 500;
+        }
+
+        .lang-flag {
+            font-size: 16px;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 85vh;
+            min-height: 600px;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            padding: 64px;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, var(--soft-cloud) 0%, var(--wood-light) 100%);
+        }
+
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><rect fill="%23f0efe9" width="800" height="600"/><g fill="%23d4a574" opacity="0.15"><circle cx="200" cy="150" r="80"/><circle cx="600" cy="450" r="120"/><rect x="300" y="200" width="200" height="300" rx="4"/></g><g fill="%232c2c2c" opacity="0.08"><rect x="150" y="280" width="120" height="220" rx="2"/><rect x="530" y="320" width="140" height="180" rx="2"/><circle cx="400" cy="400" r="40"/></g></svg>');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+        }
+
+        .hero-label {
+            display: inline-block;
+            padding: 8px 16px;
+            background: var(--wood);
+            color: white;
+            font-size: 12px;
+            font-weight: 500;
+            border-radius: 999px;
+            margin-bottom: 24px;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 72px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            color: var(--primary);
+        }
+
+        .hero-subtitle {
+            font-size: 18px;
+            color: var(--charcoal);
+            margin-bottom: 32px;
+            font-weight: 300;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 32px;
+            border-radius: 24px;
+            font-size: 16px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--on-primary);
+        }
+
+        .btn-primary:hover {
+            background: var(--wood);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: var(--soft-cloud);
+            color: var(--ink);
+        }
+
+        .btn-secondary:hover {
+            background: var(--wood-light);
+        }
+
+        /* Category Section */
+        .section {
+            padding: 80px 48px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 16px;
+        }
+
+        .category-card {
+            aspect-ratio: 1;
+            background: var(--soft-cloud);
+            border-radius: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-card:hover {
+            background: var(--wood-light);
+        }
+
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.03) 100%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .category-card:hover::before {
+            opacity: 1;
+        }
+
+        .category-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .category-name {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--ink);
+        }
+
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+        }
+
+        .product-card {
+            background: var(--canvas);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .product-image {
+            aspect-ratio: 1;
+            background: var(--soft-cloud);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--soft-cloud) 0%, var(--wood-light) 50%);
+        }
+
+        .product-image-placeholder svg {
+            width: 60%;
+            height: 60%;
+            opacity: 0.3;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            padding: 4px 12px;
+            background: white;
+            font-size: 11px;
+            font-weight: 500;
+            border-radius: 999px;
+        }
+
+        .product-badge.new {
+            color: var(--success);
+        }
+
+        .product-info {
+            padding: 16px 8px 8px;
+        }
+
+        .product-name {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--ink);
+            margin-bottom: 4px;
+        }
+
+        .product-category {
+            font-size: 12px;
+            color: var(--mute);
+            margin-bottom: 8px;
+        }
+
+        .product-price {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .price-current {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--ink);
+        }
+
+        .price-original {
+            font-size: 14px;
+            color: var(--stone);
+            text-decoration: line-through;
+        }
+
+        .price-sale {
+            font-size: 14px;
+            color: var(--sale);
+            font-weight: 500;
+        }
+
+        .color-dots {
+            display: flex;
+            gap: 6px;
+            margin-top: 8px;
+        }
+
+        .color-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 999px;
+            border: 1px solid var(--stone);
+        }
+
+        .color-dot.active {
+            border: 2px solid var(--ink);
+            border-color: var(--ink);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--soft-cloud);
+            padding: 64px 48px 32px;
+            margin-top: 80px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .footer-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .footer-desc {
+            font-size: 14px;
+            color: var(--mute);
+            line-height: 1.8;
+        }
+
+        .footer-column h4 {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            color: var(--ink);
+        }
+
+        .footer-column a {
+            display: block;
+            font-size: 13px;
+            color: var(--mute);
+            text-decoration: none;
+            margin-bottom: 12px;
+        }
+
+        .footer-column a:hover {
+            color: var(--ink);
+        }
+
+        .footer-bottom {
+            padding-top: 32px;
+            border-top: 1px solid var(--stone);
+            display: flex;
+            justify-content: space-between;
+            font-size: 12px;
+            color: var(--stone);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .category-card {
+            animation: fadeInUp 0.6s ease-out backwards;
+        }
+
+        .category-card:nth-child(1) { animation-delay: 0.1s; }
+        .category-card:nth-child(2) { animation-delay: 0.2s; }
+        .category-card:nth-child(3) { animation-delay: 0.3s; }
+        .category-card:nth-child(4) { animation-delay: 0.4s; }
+        .category-card:nth-child(5) { animation-delay: 0.5s; }
+
+        .product-card {
+            animation: fadeInUp 0.5s ease-out backwards;
+        }
+
+        .product-card:nth-child(1) { animation-delay: 0.1s; }
+        .product-card:nth-child(2) { animation-delay: 0.15s; }
+        .product-card:nth-child(3) { animation-delay: 0.2s; }
+        .product-card:nth-child(4) { animation-delay: 0.25s; }
+        .product-card:nth-child(5) { animation-delay: 0.3s; }
+        .product-card:nth-child(6) { animation-delay: 0.35s; }
+        .product-card:nth-child(7) { animation-delay: 0.4s; }
+        .product-card:nth-child(8) { animation-delay: 0.45s; }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-logo" data-i18n="brand.logo">栖居 QIJU</div>
+        <div class="nav-links">
+            <a class="nav-link" href="#storage" data-i18n="nav.storage">储物</a>
+            <a class="nav-link" href="#sleep" data-i18n="nav.sleep">睡眠</a>
+            <a class="nav-link" href="#dining" data-i18n="nav.dining">用餐</a>
+            <a class="nav-link" href="#work" data-i18n="nav.work">工作</a>
+            <a class="nav-link" href="#living" data-i18n="nav.living">客厅</a>
+        </div>
+        <div class="nav-actions">
+            <div class="lang-selector">
+                <div class="lang-button" id="langButton">
+                    <span class="lang-flag">🇨🇳</span>
+                    <span>中文</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"/>
+                    </svg>
+                </div>
+                <div class="lang-dropdown" id="langDropdown">
+                    <div class="lang-option selected" data-lang="zh">
+                        <span class="lang-flag">🇨🇳</span>
+                        <span>中文</span>
+                    </div>
+                    <div class="lang-option" data-lang="en">
+                        <span class="lang-flag">🇺🇸</span>
+                        <span>English</span>
+                    </div>
+                    <div class="lang-option" data-lang="ja">
+                        <span class="lang-flag">🇯🇵</span>
+                        <span>日本語</span>
+                    </div>
+                    <div class="lang-option" data-lang="ko">
+                        <span class="lang-flag">🇰🇷</span>
+                        <span>한국어</span>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"/>
+                    <path d="m21 21-4.35-4.35"/>
+                </svg>
+            </div>
+            <div class="nav-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                </svg>
+            </div>
+            <div class="nav-icon cart-badge">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+                    <line x1="3" y1="6" x2="21" y2="6"/>
+                    <path d="M16 10a4 4 0 0 1-8 0"/>
+                </svg>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-image"></div>
+        <div class="hero-content">
+            <span class="hero-label" data-i18n="hero.label">春季新品</span>
+            <h1 class="hero-title" data-i18n="hero.title">让家更有温度</h1>
+            <p class="hero-subtitle" data-i18n="hero.subtitle">北欧极简设计，实木 craftsmanship，为现代都市生活打造的简约家具系列</p>
+            <div style="display: flex; gap: 16px;">
+                <a href="#" class="btn btn-primary" data-i18n="btn.browse">浏览系列</a>
+                <a href="#" class="btn btn-secondary" data-i18n="btn.learnMore">了解更多</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section">
+        <div class="section-header">
+            <h2 class="section-title" data-i18n="category.title">按功能浏览</h2>
+        </div>
+        <div class="category-grid">
+            <div class="category-card">
+                <div class="category-icon">🗄️</div>
+                <div class="category-name" data-i18n="category.storage">储物</div>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">🛏️</div>
+                <div class="category-name" data-i18n="category.sleep">睡眠</div>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">🍽️</div>
+                <div class="category-name" data-i18n="category.dining">用餐</div>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">💼</div>
+                <div class="category-name" data-i18n="category.work">工作</div>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">🛋️</div>
+                <div class="category-name" data-i18n="category.living">客厅</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="section">
+        <div class="section-header">
+            <h2 class="section-title" data-i18n="product.title">本周精选</h2>
+            <a href="#" style="color: var(--wood); text-decoration: none; font-size: 14px; font-weight: 500;" data-i18n="product.viewAll">查看全部 →</a>
+        </div>
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="product-image-placeholder">
+                        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1">
+                            <rect x="20" y="40" width="60" height="50" rx="2"/>
+                            <rect x="25" y="30" width="50" height="12" rx="1"/>
+                            <line x1="30" y1="50" x2="30" y2="85"/>
+                            <line x1="50" y1="50" x2="50" y2="85"/>
+                            <line x1="70" y1="50" x2="70" y2="85"/>
+                        </svg>
+                    </div>
+                    <span class="product-badge new" data-i18n="badge.new">新品</span>
+                </div>
+                <div class="product-info">
+                    <div class="product-name" data-i18n="prod1.name">榆木五斗柜</div>
+                    <div class="product-category" data-i18n="prod1.category">储物 / 衣柜</div>
+                    <div class="product-price">
+                        <span class="price-current" data-i18n="prod1.price">¥2,899</span>
+                    </div>
+                    <div class="color-dots">
+                        <div class="color-dot active" style="background: #d4a574;"></div>
+                        <div class="color-dot" style="background: #f5f5f5; border-color: #ccc;"></div>
+                        <div class="color-dot" style="background: #4a4a4a;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="product-image-placeholder">
+                        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1">
+                            <rect x="15" y="55" width="70" height="8" rx="2"/>
+                            <rect x="20" y="45" width="8" height="12"/>
+                            <rect x="72" y="45" width="8" height="12"/>
+                            <rect x="25" y="25" width="50" height="25" rx="3"/>
+                            <line x1="30" y1="32" x2="70" y2="32"/>
+                            <line x1="30" y1="40" x2="70" y2="40"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-name" data-i18n="prod2.name">北欧实木双人床</div>
+                    <div class="product-category" data-i18n="prod2.category">睡眠 / 床</div>
+                    <div class="product-price">
+                        <span class="price-current" data-i18n="prod2.price">¥4,599</span>
+                        <span class="price-original" data-i18n="prod2.priceOriginal">¥5,299</span>
+                        <span class="price-sale" data-i18n="prod2.discount">-13%</span>
+                    </div>
+                    <div class="color-dots">
+                        <div class="color-dot active" style="background: #d4a574;"></div>
+                        <div class="color-dot" style="background: #f5f5f5; border-color: #ccc;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="product-image-placeholder">
+                        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1">
+                            <ellipse cx="50" cy="60" rx="35" ry="8"/>
+                            <line x1="25" y1="60" x2="25" y2="85"/>
+                            <line x1="75" y1="60" x2="75" y2="85"/>
+                            <line x1="22" y1="85" x2="78" y2="85"/>
+                            <rect x="35" y="45" width="30" height="5" rx="1"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-name" data-i18n="prod3.name">橡木圆餐桌</div>
+                    <div class="product-category" data-i18n="prod3.category">用餐 / 餐桌</div>
+                    <div class="product-price">
+                        <span class="price-current" data-i18n="prod3.price">¥1,899</span>
+                    </div>
+                    <div class="color-dots">
+                        <div class="color-dot active" style="background: #d4a574;"></div>
+                        <div class="color-dot" style="background: #4a4a4a;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="product-image-placeholder">
+                        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1">
+                            <rect x="20" y="35" width="60" height="5" rx="1"/>
+                            <rect x="25" y="40" width="6" height="40"/>
+                            <rect x="69" y="40" width="6" height="40"/>
+                            <rect x="22" y="78" width="56" height="4" rx="1"/>
+                            <rect x="35" y="30" width="30" height="8" rx="2"/>
+                        </svg>
+                    </div>
+                    <span class="product-badge new" data-i18n="badge.new">新品</span>
+                </div>
+                <div class="product-info">
+                    <div class="product-name" data-i18n="prod4.name">升降书桌</div>
+                    <div class="product-category" data-i18n="prod4.category">工作 / 书桌</div>
+                    <div class="product-price">
+                        <span class="price-current" data-i18n="prod4.price">¥2,199</span>
+                    </div>
+                    <div class="color-dots">
+                        <div class="color-dot active" style="background: #f5f5f5; border-color: #ccc;"></div>
+                        <div class="color-dot" style="background: #4a4a4a;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="product-image-placeholder">
+                        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1">
+                            <rect x="20" y="30" width="60" height="50" rx="2"/>
+                            <line x1="25" y1="30" x2="25" y2="80"/>
+                            <line x1="35" y1="30" x2="35" y2="80"/>
+                            <line x1="45" y1="30" x2="45" y2="80"/>
+                            <line x1="55" y1="30" x2="55" y2="80"/>
+                            <line x1="65" y1="30" x2="65" y2="80"/>
+                            <line x1="75" y1="30" x2="75" y2="80"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-name" data-i18n="prod5.name">书柜组合</div>
+                    <div class="product-category" data-i18n="prod5.category">储物 / 书柜</div>
+                    <div class="product-price">
+                        <span class="price-current" data-i18n="prod5.price">¥3,299</span>
+                        <span class="price-original" data-i18n="prod5.priceOriginal">¥3,899</span>
+                        <span class="price-sale" data-i18n="prod5.discount">-15%</span>
+                    </div>
+                    <div class="color-dots">
+                        <div class="color-dot active" style="background: #f5f5f5; border-color: #ccc;"></div>
+                        <div class="color-dot" style="background: #4a4a4a;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="product-image-placeholder">
+                        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1">
+                            <rect x="15" y="50" width="25" height="35" rx="3"/>
+                            <rect x="60" y="50" width="25" height="35" rx="3"/>
+                            <rect x="10" y="45" width="35" height="8" rx="2"/>
+                            <rect x="55" y="45" width="35" height="8" rx="2"/>
+                            <rect x="30" y="30" width="40" height="18" rx="3"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-name" data-i18n="prod6.name">布艺沙发</div>
+                    <div class="product-category" data-i18n="prod6.category">客厅 / 沙发</div>
+                    <div class="product-price">
+                        <span class="price-current" data-i18n="prod6.price">¥5,999</span>
+                    </div>
+                    <div class="color-dots">
+                        <div class="color-dot active" style="background: #e8ddd4;"></div>
+                        <div class="color-dot" style="background: #4a4a4a;"></div>
+                        <div class="color-dot" style="background: #8b7355;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="product-image-placeholder">
+                        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1">
+                            <rect x="25" y="55" width="50" height="8" rx="2"/>
+                            <rect x="30" y="40" width="8" height="17"/>
+                            <rect x="62" y="40" width="8" height="17"/>
+                            <rect x="30" y="25" width="40" height="18" rx="2"/>
+                        </svg>
+                    </div>
+                    <span class="product-badge new" data-i18n="badge.new">新品</span>
+                </div>
+                <div class="product-info">
+                    <div class="product-name" data-i18n="prod7.name">床头柜</div>
+                    <div class="product-category" data-i18n="prod7.category">睡眠 / 床头柜</div>
+                    <div class="product-price">
+                        <span class="price-current" data-i18n="prod7.price">¥699</span>
+                    </div>
+                    <div class="color-dots">
+                        <div class="color-dot active" style="background: #d4a574;"></div>
+                        <div class="color-dot" style="background: #f5f5f5; border-color: #ccc;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="product-image-placeholder">
+                        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1">
+                            <rect x="20" y="40" width="60" height="40" rx="2"/>
+                            <rect x="25" y="35" width="50" height="8" rx="1"/>
+                            <line x1="50" y1="40" x2="50" y2="80"/>
+                            <circle cx="38" cy="58" r="6"/>
+                            <circle cx="62" cy="58" r="6"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-name" data-i18n="prod8.name">电视柜</div>
+                    <div class="product-category" data-i18n="prod8.category">客厅 / 电视柜</div>
+                    <div class="product-price">
+                        <span class="price-current" data-i18n="prod8.price">¥1,599</span>
+                        <span class="price-original" data-i18n="prod8.priceOriginal">¥1,899</span>
+                        <span class="price-sale" data-i18n="prod8.discount">-16%</span>
+                    </div>
+                    <div class="color-dots">
+                        <div class="color-dot active" style="background: #d4a574;"></div>
+                        <div class="color-dot" style="background: #f5f5f5; border-color: #ccc;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-brand-col">
+                <div class="footer-brand" data-i18n="brand.footer">栖居 QIJU</div>
+                <p class="footer-desc" data-i18n="brand.desc">为现代都市生活打造的简约家具系列。<br>北欧设计 · 实木工艺 · 适度生活</p>
+            </div>
+            <div class="footer-column">
+                <h4 data-i18n="footer.products">产品</h4>
+                <a href="#" data-i18n="footer.newArrivals">新品上架</a>
+                <a href="#" data-i18n="footer.bestsellers">热销系列</a>
+                <a href="#" data-i18n="footer.sale">限时优惠</a>
+                <a href="#" data-i18n="footer.giftCard">礼品卡</a>
+            </div>
+            <div class="footer-column">
+                <h4 data-i18n="footer.help">帮助</h4>
+                <a href="#" data-i18n="footer.shipping">配送信息</a>
+                <a href="#" data-i18n="footer.returns">退换政策</a>
+                <a href="#" data-i18n="footer.installation">安装服务</a>
+                <a href="#" data-i18n="footer.faq">常见问题</a>
+            </div>
+            <div class="footer-column">
+                <h4 data-i18n="footer.about">关于</h4>
+                <a href="#" data-i18n="footer.story">品牌故事</a>
+                <a href="#" data-i18n="footer.philosophy">设计理念</a>
+                <a href="#" data-i18n="footer.sustainability">可持续发展</a>
+                <a href="#" data-i18n="footer.careers">加入我们</a>
+            </div>
+            <div class="footer-column">
+                <h4 data-i18n="footer.contact">联系</h4>
+                <a href="#" data-i18n="footer.support">在线客服</a>
+                <a href="#" data-i18n="footer.showroom">预约展厅</a>
+                <a href="#" data-i18n="footer.b2b">企业采购</a>
+                <a href="#" data-i18n="footer.partnership">合作洽谈</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span data-i18n="footer.copyright">© 2026 栖居 QIJU. All rights reserved.</span>
+            <span data-i18n="footer.legal">隐私政策 · 服务条款 · 沪ICP备xxxxxxxx号</span>
+        </div>
+    </footer>
+
+    <script>
+        // Translation data
+        const translations = {
+            zh: {
+                'brand.logo': '栖居 QIJU',
+                'brand.footer': '栖居 QIJU',
+                'brand.desc': '为现代都市生活打造的简约家具系列。<br>北欧设计 · 实木工艺 · 适度生活',
+                'nav.storage': '储物',
+                'nav.sleep': '睡眠',
+                'nav.dining': '用餐',
+                'nav.work': '工作',
+                'nav.living': '客厅',
+                'hero.label': '春季新品',
+                'hero.title': '让家更有温度',
+                'hero.subtitle': '北欧极简设计，实木 craftsmanship，为现代都市生活打造的简约家具系列',
+                'btn.browse': '浏览系列',
+                'btn.learnMore': '了解更多',
+                'category.title': '按功能浏览',
+                'category.storage': '储物',
+                'category.sleep': '睡眠',
+                'category.dining': '用餐',
+                'category.work': '工作',
+                'category.living': '客厅',
+                'product.title': '本周精选',
+                'product.viewAll': '查看全部 →',
+                'badge.new': '新品',
+                'prod1.name': '榆木五斗柜',
+                'prod1.category': '储物 / 衣柜',
+                'prod1.price': '¥2,899',
+                'prod2.name': '北欧实木双人床',
+                'prod2.category': '睡眠 / 床',
+                'prod2.price': '¥4,599',
+                'prod2.priceOriginal': '¥5,299',
+                'prod2.discount': '-13%',
+                'prod3.name': '橡木圆餐桌',
+                'prod3.category': '用餐 / 餐桌',
+                'prod3.price': '¥1,899',
+                'prod4.name': '升降书桌',
+                'prod4.category': '工作 / 书桌',
+                'prod4.price': '¥2,199',
+                'prod5.name': '书柜组合',
+                'prod5.category': '储物 / 书柜',
+                'prod5.price': '¥3,299',
+                'prod5.priceOriginal': '¥3,899',
+                'prod5.discount': '-15%',
+                'prod6.name': '布艺沙发',
+                'prod6.category': '客厅 / 沙发',
+                'prod6.price': '¥5,999',
+                'prod7.name': '床头柜',
+                'prod7.category': '睡眠 / 床头柜',
+                'prod7.price': '¥699',
+                'prod8.name': '电视柜',
+                'prod8.category': '客厅 / 电视柜',
+                'prod8.price': '¥1,599',
+                'prod8.priceOriginal': '¥1,899',
+                'prod8.discount': '-16%',
+                'footer.products': '产品',
+                'footer.newArrivals': '新品上架',
+                'footer.bestsellers': '热销系列',
+                'footer.sale': '限时优惠',
+                'footer.giftCard': '礼品卡',
+                'footer.help': '帮助',
+                'footer.shipping': '配送信息',
+                'footer.returns': '退换政策',
+                'footer.installation': '安装服务',
+                'footer.faq': '常见问题',
+                'footer.about': '关于',
+                'footer.story': '品牌故事',
+                'footer.philosophy': '设计理念',
+                'footer.sustainability': '可持续发展',
+                'footer.careers': '加入我们',
+                'footer.contact': '联系',
+                'footer.support': '在线客服',
+                'footer.showroom': '预约展厅',
+                'footer.b2b': '企业采购',
+                'footer.partnership': '合作洽谈',
+                'footer.copyright': '© 2026 栖居 QIJU. All rights reserved.',
+                'footer.legal': '隐私政策 · 服务条款 · 沪ICP备xxxxxxxx号'
+            },
+            en: {
+                'brand.logo': 'QIJU Home',
+                'brand.footer': 'QIJU Home',
+                'brand.desc': 'Minimalist furniture for modern urban living.<br>Nordic Design · Solid Wood Craftsmanship · Mindful Living',
+                'nav.storage': 'Storage',
+                'nav.sleep': 'Sleep',
+                'nav.dining': 'Dining',
+                'nav.work': 'Work',
+                'nav.living': 'Living',
+                'hero.label': 'New Collection',
+                'hero.title': 'Warmth for Your Home',
+                'hero.subtitle': 'Nordic minimalist design, solid wood craftsmanship, furniture collection crafted for modern urban life',
+                'btn.browse': 'Shop Collection',
+                'btn.learnMore': 'Learn More',
+                'category.title': 'Browse by Function',
+                'category.storage': 'Storage',
+                'category.sleep': 'Sleep',
+                'category.dining': 'Dining',
+                'category.work': 'Work',
+                'category.living': 'Living',
+                'product.title': 'Featured This Week',
+                'product.viewAll': 'View All →',
+                'badge.new': 'New',
+                'prod1.name': 'Elm 5-Drawer Chest',
+                'prod1.category': 'Storage / Wardrobe',
+                'prod1.price': '$399',
+                'prod2.name': 'Nordic Solid Wood Bed',
+                'prod2.category': 'Sleep / Bed',
+                'prod2.price': '$629',
+                'prod2.priceOriginal': '$729',
+                'prod2.discount': '-14%',
+                'prod3.name': 'Oak Round Dining Table',
+                'prod3.category': 'Dining / Table',
+                'prod3.price': '$259',
+                'prod4.name': 'Height-Adjustable Desk',
+                'prod4.category': 'Work / Desk',
+                'prod4.price': '$299',
+                'prod5.name': 'Bookshelf Set',
+                'prod5.category': 'Storage / Bookshelf',
+                'prod5.price': '$449',
+                'prod5.priceOriginal': '$529',
+                'prod5.discount': '-15%',
+                'prod6.name': 'Fabric Sofa',
+                'prod6.category': 'Living / Sofa',
+                'prod6.price': '$819',
+                'prod7.name': 'Nightstand',
+                'prod7.category': 'Sleep / Nightstand',
+                'prod7.price': '$95',
+                'prod8.name': 'TV Console',
+                'prod8.category': 'Living / TV Unit',
+                'prod8.price': '$219',
+                'prod8.priceOriginal': '$259',
+                'prod8.discount': '-15%',
+                'footer.products': 'Products',
+                'footer.newArrivals': 'New Arrivals',
+                'footer.bestsellers': 'Bestsellers',
+                'footer.sale': 'Limited Offers',
+                'footer.giftCard': 'Gift Cards',
+                'footer.help': 'Help',
+                'footer.shipping': 'Delivery Info',
+                'footer.returns': 'Returns',
+                'footer.installation': 'Installation',
+                'footer.faq': 'FAQ',
+                'footer.about': 'About',
+                'footer.story': 'Our Story',
+                'footer.philosophy': 'Design Philosophy',
+                'footer.sustainability': 'Sustainability',
+                'footer.careers': 'Careers',
+                'footer.contact': 'Contact',
+                'footer.support': 'Live Support',
+                'footer.showroom': 'Book Showroom',
+                'footer.b2b': 'B2B Sales',
+                'footer.partnership': 'Partnership',
+                'footer.copyright': '© 2026 QIJU Home. All rights reserved.',
+                'footer.legal': 'Privacy · Terms · ICP License'
+            },
+            ja: {
+                'brand.logo': '栖居 QIJU',
+                'brand.footer': '栖居 QIJU',
+                'brand.desc': '現代都市生活のためのミニマリスト家具。<br>北欧デザイン · 堅木の職人技 · シンプルライフ',
+                'nav.storage': '収納',
+                'nav.sleep': '睡眠',
+                'nav.dining': 'ダイニング',
+                'nav.work': 'ワーク',
+                'nav.living': 'リビング',
+                'hero.label': '春の新作',
+                'hero.title': '家に温もりを',
+                'hero.subtitle': '北欧ミニマルデザイン、堅木の職人技、現代都市生活のために作られたミニマリスト家具シリーズ',
+                'btn.browse': 'コレクションを見る',
+                'btn.learnMore': '詳しく見る',
+                'category.title': '機能から探す',
+                'category.storage': '収納',
+                'category.sleep': '睡眠',
+                'category.dining': 'ダイニング',
+                'category.work': 'ワーク',
+                'category.living': 'リビング',
+                'product.title': '今週のおすすめ',
+                'product.viewAll': 'すべて見る →',
+                'badge.new': '新作',
+                'prod1.name': 'エルム材5段チェスト',
+                'prod1.category': '収納 / クローゼット',
+                'prod1.price': '¥42,899',
+                'prod2.name': '北欧堅木ダブルベッド',
+                'prod2.category': '睡眠 / ベッド',
+                'prod2.price': '¥67,599',
+                'prod2.priceOriginal': '¥77,299',
+                'prod2.discount': '-13%',
+                'prod3.name': 'オーク材円形ダイニングテーブル',
+                'prod3.category': 'ダイニング / テーブル',
+                'prod3.price': '¥27,899',
+                'prod4.name': '昇降デスク',
+                'prod4.category': 'ワーク / デスク',
+                'prod4.price': '¥32,199',
+                'prod5.name': '本棚セット',
+                'prod5.category': '収納 / 本棚',
+                'prod5.price': '¥48,299',
+                'prod5.priceOriginal': '¥56,899',
+                'prod5.discount': '-15%',
+                'prod6.name': 'ファブリックソファ',
+                'prod6.category': 'リビング / ソファ',
+                'prod6.price': '¥87,999',
+                'prod7.name': 'サイドテーブル',
+                'prod7.category': '睡眠 / ナイトスタンド',
+                'prod7.price': '¥10,299',
+                'prod8.name': 'テレビボード',
+                'prod8.category': 'リビング / テレビ台',
+                'prod8.price': '¥23,599',
+                'prod8.priceOriginal': '¥28,099',
+                'prod8.discount': '-16%',
+                'footer.products': '製品',
+                'footer.newArrivals': '新商品',
+                'footer.bestsellers': '人気商品',
+                'footer.sale': '限定オファー',
+                'footer.giftCard': 'ギフトカード',
+                'footer.help': 'ヘルプ',
+                'footer.shipping': '配送情報',
+                'footer.returns': '返品・交換',
+                'footer.installation': '設置サービス',
+                'footer.faq': 'よくある質問',
+                'footer.about': 'について',
+                'footer.story': 'ブランドストーリー',
+                'footer.philosophy': 'デザイン哲学',
+                'footer.sustainability': 'サステナビリティ',
+                'footer.careers': '採用情報',
+                'footer.contact': 'お問い合わせ',
+                'footer.support': 'オンラインサポート',
+                'footer.showroom': 'ショールール予約',
+                'footer.b2b': '法人購入',
+                'footer.partnership': 'パートナーシップ',
+                'footer.copyright': '© 2026 栖居 QIJU. All rights reserved.',
+                'footer.legal': 'プライバシー · 利用規約 · ICP備案番号'
+            },
+            ko: {
+                'brand.logo': '栖居 QIJU',
+                'brand.footer': '栖居 QIJU',
+                'brand.desc': '현대 도시 생활을 위한 미니멀리스트 가구.<br>북유럽 디자인 · 목공 장인 정신 · 절제된 삶',
+                'nav.storage': '수납',
+                'nav.sleep': '수면',
+                'nav.dining': '다이닝',
+                'nav.work': '워크',
+                'nav.living': '리빙',
+                'hero.label': '봄 신상품',
+                'hero.title': '집에 온기를 더하다',
+                'hero.subtitle': '북유럽 미니멀 디자인, 목공 장인 정신, 현대 도시 생활을 위해 만들어진 미니멀리스트 가구 시리즈',
+                'btn.browse': '컬렉션 보기',
+                'btn.learnMore': '더 알아보기',
+                'category.title': '용도별 보기',
+                'category.storage': '수납',
+                'category.sleep': '수면',
+                'category.dining': '다이닝',
+                'category.work': '워크',
+                'category.living': '리빙',
+                'product.title': '이번 주 추천',
+                'product.viewAll': '전체보기 →',
+                'badge.new': '신상',
+                'prod1.name': '엘름 5서랍장',
+                'prod1.category': '수납 / 옷장',
+                'prod1.price': '₩428,900',
+                'prod2.name': '북유럽 목재 더블 침대',
+                'prod2.category': '수면 / 침대',
+                'prod2.price': '₩675,900',
+                'prod2.priceOriginal': '₩772,900',
+                'prod2.discount': '-13%',
+                'prod3.name': '오크 원형 식탁',
+                'prod3.category': '다이닝 / 테이블',
+                'prod3.price': '₩278,900',
+                'prod4.name': '높이 조절 책상',
+                'prod4.category': '워크 / 책상',
+                'prod4.price': '₩321,900',
+                'prod5.name': '책장 세트',
+                'prod5.category': '수납 / 책장',
+                'prod5.price': '₩482,900',
+                'prod5.priceOriginal': '₩568,900',
+                'prod5.discount': '-15%',
+                'prod6.name': '패브릭 소파',
+                'prod6.category': '리빙 / 소파',
+                'prod6.price': '₩879,900',
+                'prod7.name': '협탁',
+                'prod7.category': '수면 / 난트 테이블',
+                'prod7.price': '₩102,900',
+                'prod8.name': 'TV 장식장',
+                'prod8.category': '리빙 / TV 수납',
+                'prod8.price': '₩235,900',
+                'prod8.priceOriginal': '₩280,900',
+                'prod8.discount': '-16%',
+                'footer.products': '제품',
+                'footer.newArrivals': '신상품',
+                'footer.bestsellers': '인기 제품',
+                'footer.sale': '한정 혜택',
+                'footer.giftCard': '기프트카드',
+                'footer.help': '도움말',
+                'footer.shipping': '배송 정보',
+                'footer.returns': '반품/교환',
+                'footer.installation': '설치 서비스',
+                'footer.faq': '자주 묻는 질문',
+                'footer.about': '소개',
+                'footer.story': '브랜드 스토리',
+                'footer.philosophy': '디자인 철학',
+                'footer.sustainability': '지속 가능성',
+                'footer.careers': '채용',
+                'footer.contact': '연락처',
+                'footer.support': '고객센터',
+                'footer.showroom': '쇼룸 예약',
+                'footer.b2b': '기업 구매',
+                'footer.partnership': '제휴 문의',
+                'footer.copyright': '© 2026 栖居 QIJU. All rights reserved.',
+                'footer.legal': '개인정보처리방침 · 이용약관 · ICP备案번호'
+            }
+        };
+
+        // Language data for button display
+        const langData = {
+            zh: { flag: '🇨🇳', name: '中文', htmlLang: 'zh-CN' },
+            en: { flag: '🇺🇸', name: 'English', htmlLang: 'en' },
+            ja: { flag: '🇯🇵', name: '日本語', htmlLang: 'ja' },
+            ko: { flag: '🇰🇷', name: '한국어', htmlLang: 'ko' }
+        };
+
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            const langButton = document.getElementById('langButton');
+            const langDropdown = document.getElementById('langDropdown');
+            const langOptions = document.querySelectorAll('.lang-option');
+
+            // Load saved language or default to zh
+            let currentLang = localStorage.getItem('qiju-lang') || 'zh';
+
+            // Set language function
+            function setLanguage(lang) {
+                if (!translations[lang]) return;
+
+                currentLang = lang;
+
+                // Update button display
+                const data = langData[lang];
+                langButton.querySelector('.lang-flag').textContent = data.flag;
+                langButton.querySelector('span:not(.lang-flag)').textContent = data.name;
+
+                // Update html lang attribute
+                document.documentElement.lang = data.htmlLang;
+                document.body.lang = data.htmlLang;
+
+                // Update all translatable elements
+                const elements = document.querySelectorAll('[data-i18n]');
+                elements.forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if (translations[lang] && translations[lang][key]) {
+                        el.innerHTML = translations[lang][key];
+                    }
+                });
+
+                // Update selected state
+                langOptions.forEach(opt => {
+                    opt.classList.remove('selected');
+                    if (opt.dataset.lang === lang) {
+                        opt.classList.add('selected');
+                    }
+                });
+
+                // Save to localStorage
+                localStorage.setItem('qiju-lang', lang);
+
+                console.log('Language changed to:', lang);
+            }
+
+            // Initialize with saved language
+            setLanguage(currentLang);
+
+            // Language button click
+            if (langButton) {
+                langButton.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    langButton.classList.toggle('active');
+                    langDropdown.classList.toggle('show');
+                });
+            }
+
+            // Language option click
+            langOptions.forEach(option => {
+                option.addEventListener('click', (e) => {
+                    const lang = option.dataset.lang;
+                    setLanguage(lang);
+
+                    // Close dropdown
+                    langButton.classList.remove('active');
+                    langDropdown.classList.remove('show');
+                });
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', () => {
+                if (langButton && langDropdown) {
+                    langButton.classList.remove('active');
+                    langDropdown.classList.remove('show');
+                }
+            });
+
+            // Prevent dropdown from closing when clicking inside it
+            if (langDropdown) {
+                langDropdown.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                });
+            }
+        });
+    </script>
+</body>
+</html>
