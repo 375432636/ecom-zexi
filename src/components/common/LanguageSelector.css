@@ -1,0 +1,65 @@
+.lang-selector {
+  position: relative;
+}
+
+.lang-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--color-soft-cloud);
+  border-radius: var(--rounded-full);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-ink);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.lang-button:hover {
+  background: var(--color-wood-light);
+}
+
+.lang-chevron {
+  transition: transform 0.2s;
+}
+
+.lang-chevron.open {
+  transform: rotate(180deg);
+}
+
+.lang-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: white;
+  border-radius: var(--rounded-md);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  min-width: 140px;
+  overflow: hidden;
+  z-index: var(--z-dropdown);
+}
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px var(--spacing-md);
+  font-size: 14px;
+  color: var(--color-ink);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.lang-option:hover {
+  background: var(--color-soft-cloud);
+}
+
+.lang-option.selected {
+  background: var(--color-wood-light);
+  font-weight: 500;
+}
+
+.lang-flag {
+  font-size: 16px;
+}
