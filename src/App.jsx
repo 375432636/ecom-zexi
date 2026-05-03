@@ -1,6 +1,6 @@
 import { I18nProvider } from './contexts/I18nContext';
-import AppRouter from './router/AppRouter';
-import PageLayout from './components/layout/PageLayout';
+import { AppRouter } from './router/AppRouter';
+import { PageLayout } from './components/layout/PageLayout';
 
 function App() {
   return (

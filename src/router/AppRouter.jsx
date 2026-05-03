@@ -1,8 +1,13 @@
-/* AppRouter will be implemented in a later task */
-import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Home } from '../pages/Home';
 
-const AppRouter = () => {
-  return <div>Router will be implemented later</div>;
+export const AppRouter = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<div>Product List (Coming Soon)</div>} />
+      </Routes>
+    </BrowserRouter>
+  );
 };
-
-export default AppRouter;
