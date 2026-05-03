@@ -26,7 +26,7 @@ export const ProductDetail = () => {
     );
   }
 
-  const { name, category, price, originalPrice, discount, badge, colors } = product;
+  const { image, name, category, price, originalPrice, discount, badge, colors } = product;
 
   const handleQuantityChange = (delta) => {
     const newQuantity = quantity + delta;
@@ -59,16 +59,11 @@ export const ProductDetail = () => {
       <div className="product-showcase">
         <div className="product-images">
           <div className="product-main-image">
-            <div
-              className="image-placeholder"
-              style={{
-                background: `linear-gradient(135deg, ${colors[selectedColor]}22 0%, ${colors[selectedColor]}44 100%)`
-              }}
-            >
-              <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="1">
-                <rect x="20" y="30" width="60" height="50" rx="2"/>
-              </svg>
-            </div>
+            <img
+              src={image}
+              alt={name}
+              className="detail-main-img"
+            />
           </div>
           {colors && colors.length > 1 && (
             <div className="product-thumbnails">

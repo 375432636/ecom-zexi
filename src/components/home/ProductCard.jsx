@@ -2,18 +2,18 @@ import { Link } from 'react-router-dom';
 import './ProductCard.css';
 
 export const ProductCard = ({ product }) => {
-  const { id, name, category, price, originalPrice, discount, badge, colors } = product;
+  const { id, image, name, category, price, originalPrice, discount, badge, colors } = product;
 
   return (
     <Link to={`/product/${id}`} className="product-card-link">
       <div className="product-card">
       <div className="product-image">
-        <div className="product-image-placeholder">
-          {/* SVG placeholder will be replaced with actual image */}
-          <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="1">
-            <rect x="20" y="30" width="60" height="50" rx="2"/>
-          </svg>
-        </div>
+        <img
+          src={image}
+          alt={name}
+          className="product-image-img"
+          loading="lazy"
+        />
         {badge && <span className="product-badge new">{badge}</span>}
       </div>
       <div className="product-info">
